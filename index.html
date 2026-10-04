@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>تقييم المعلمة للطلاب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#main" aria-label="العودة إلى نموذج التقييم">
+            <img src="image/logo.png" alt="شعار المدرسة">
+        </a>
+        
+    </header>
+
+    <main id="main" class="page-shell">
+        <section class="intro" aria-labelledby="page-title">
+           
+            <h1 id="page-title">تقييم المعلمة للطلاب</h1>
+            <p>سجل المتابعة اليومي.</p>
+        </section>
+
+        <form class="evaluation-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="student-name"><i class="fa-solid fa-user" aria-hidden="true"></i>اسم الطالب/ـة</label>
+                    <input id="student-name" name="studentName" type="text" placeholder="اكتب اسم الطالب/ـة" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="grade"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>الصف</label>
+                    <input id="grade" name="grade" type="text" placeholder="اكتب الصف" required>
+                </div>
+
+                <div class="field">
+                    <label for="quran"><i class="fa-solid fa-book" aria-hidden="true"></i>تقييم القرآن الكريم</label>
+                    <select id="quran" name="quranEvaluation" data-choice-cards required>
+                        <option value="" selected disabled>اختر التقييم</option>
+                        <option value="متقن">متقن</option>
+                        <option value="إلى حد ما">إلى حد ما</option>
+                        <option value="لم يتقن">لم يتقن</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="noor-al-bayan"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>تقييم نور البيان</label>
+                    <select id="noor-al-bayan" name="noorAlBayanEvaluation" data-choice-cards required>
+                        <option value="" selected disabled>اختر التقييم</option>
+                        <option value="متقن">متقن</option>
+                        <option value="إلى حد ما">إلى حد ما</option>
+                        <option value="لم يتقن">لم يتقن</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="learning-nectar"><i class="fa-solid fa-seedling" aria-hidden="true"></i>تقييم رحيق تعلم</label>
+                    <select id="learning-nectar" name="learningNectarEvaluation" data-choice-cards required>
+                        <option value="" selected disabled>اختر التقييم</option>
+                        <option value="متقن">متقن</option>
+                        <option value="إلى حد ما">إلى حد ما</option>
+                        <option value="لم يتقن">لم يتقن</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="activities"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>تقييم الأنشطة التعليمية</label>
+                    <select id="activities" name="activitiesEvaluation" data-choice-cards required>
+                        <option value="" selected disabled>اختر التقييم</option>
+                        <option value="متقن">متقن</option>
+                        <option value="إلى حد ما">إلى حد ما</option>
+                        <option value="لم يتقن">لم يتقن</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="free-play"><i class="fa-solid fa-gamepad" aria-hidden="true"></i>اللعب الحر</label>
+                    <select id="free-play" name="freePlay" data-choice-cards required>
+                        <option value="" selected disabled>اختر المشاركة</option>
+                        <option value="شارك">شارك</option>
+                        <option value="لم يشارك">لم يشارك</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="meal"><i class="fa-solid fa-utensils" aria-hidden="true"></i>الوجبة</label>
+                    <select id="meal" name="mealStatus" data-choice-cards required>
+                        <option value="" selected disabled>اختر حالة الوجبة</option>
+                        <option value="أكل وجبة صحية متنوعة">أكل وجبة صحية متنوعة</option>
+                        <option value="أكل وجبة غير صحية">أكل وجبة غير صحية</option>
+                        <option value="لم يأكل">لم يأكل</option>
+                    </select>
+                </div>
+
+                
+
+                <div class="field field-wide">
+                    <label for="teacher-notes"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>ملاحظات المعلمة</label>
+                    <textarea id="teacher-notes" name="teacherNotes" rows="4" placeholder="اكتب الملاحظات هنا..."></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="parent-phone"><i class="fa-solid fa-phone" aria-hidden="true"></i>رقم ولي الأمر</label>
+                    <input id="parent-phone" name="parentPhone" type="tel" inputmode="tel" placeholder="05XXXXXXXX" pattern="(05|5)[0-9]{8}" autocomplete="tel" required>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">إرسال<i class="fa-solid fa-message" aria-hidden="true"></i></button>
+            </div>
+        </form>
+
+        <footer class="site-footer">سجل متابعة الطالب</footer>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
